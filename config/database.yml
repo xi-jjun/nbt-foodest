@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: mysql_foodest
+  host: 127.0.0.1
+  port: 3308
+
+development:
+  <<: *default
+  database: foodestdb
+
+test:
+  <<: *default
+  database: foodestdb_test
+
+production:
+  <<: *default
+  database: nbt_foodest_production
+  username: nbt_foodest
+  password: <%= ENV["NBT_FOODEST_DATABASE_PASSWORD"] %>

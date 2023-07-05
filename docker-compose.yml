@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: foodest
+      MYSQL_ROOT_PASSWORD: mysql_foodest
+    ports:
+      - "3308:3306"
+    volumes:
+      - /var/lib/mysql
