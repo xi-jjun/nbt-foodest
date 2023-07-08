@@ -1,0 +1,19 @@
+.registration-page, .login-page {
+  margin: 18px;
+}
+
+.focus-btn {
+  color: honeydew;
+  background-color: #652db6;
+  border-radius: 8px;
+  border: none;
+}
+
+.non-focus-btn {
+  color: #652db6; /* border 색상도 따라감 */
+  background-color: #F7F7F7;
+  border: solid;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+}

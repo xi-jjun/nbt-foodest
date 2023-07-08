@@ -32,3 +32,5 @@
 
 .idea
 .ruby-version
+nbt-foodest.iml
+db/schema.rb
