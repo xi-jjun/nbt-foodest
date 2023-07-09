@@ -1,0 +1,41 @@
+/*.restaurant-list-page {*/
+/*  margin: 15px;*/
+/*}*/
+
+.restaurant-item {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: #652db6;
+  border-radius: 8px;
+  height: 130px;
+  align-content: center; /* 세로정렬 */
+}
+
+.restaurant-thumbnail > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/*.restaurant-infos {*/
+/*  margin-left: 8px;*/
+/*}*/
+
+.restaurant-info-name {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.restaurant-info-review-user {
+  font-size: 14px;
+}
+
+.restaurant-info-one_line_review {
+  font-size: 14px;
+  color: #666666;
+}

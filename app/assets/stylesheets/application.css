@@ -15,6 +15,7 @@
  */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 @import "users/sign-up.css";
+@import "restaurants/list-page.css";
 
 * {
   font-family: 'Nanum Gothic', sans-serif;
