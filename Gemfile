@@ -7,6 +7,7 @@ ruby "3.2.1"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
 gem 'devise'
+gem 'draper'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
