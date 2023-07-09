@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <title>O파티 Foodest</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,6 +17,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section class="d-flex flex-column w-100 m-0 p-0">
+      <%= render 'layouts/nav-bar' %>
+      <%= yield %>
+    </section>
   </body>
 </html>

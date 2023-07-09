@@ -14,11 +14,13 @@
  *= require_self
  */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@import "users/sign-up.css";
-@import "restaurants/list-page.css";
 
 * {
   font-family: 'Nanum Gothic', sans-serif;
   padding: 0;
   margin: 0;
+}
+
+.nav-bar-service-title {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
