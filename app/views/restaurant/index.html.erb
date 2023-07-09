@@ -1,22 +1,16 @@
-<section class="restaurant-list-page m-3">
-  <div class="container">
-    <% @restaurants.each do |restaurant| %>
-      <div class="row restaurant-item">
-        <div class="col-4 restaurant-thumbnail">
-          <%= image_tag "#{restaurant.thumbnail}" %>
-        </div>
-        <div class="col ms-2 restaurant-infos">
-          <div class="row restaurant-info-name">
-            <%= restaurant.name %>
-          </div>
-          <div class="row restaurant-info-review-user">
-            리뷰 작성자 : 테스트유저1
-          </div>
-          <div class="row restaurant-info-one_line_review">
-            사장님이 맛있고, 음식이 친절하네요.
+<section class="restaurant-list-page">
+  <% @restaurants.each do |restaurant| %>
+    <div class="restaurant-item">
+      <div class="restaurant-card">
+        <div class="content d-flex">
+          <div class="col">
+            <p class="restaurant-location-name fs-6">위치정보</p>
+            <p class="restaurant-info-name fw-bold fs-2"><%= restaurant.name %></p>
+            <span class="text-light fst-italic restaurant-info-one_line_review shadow-sm">사장님이 친절하고 가격 좋고 맛난 집</span>
           </div>
         </div>
+        <%= image_tag "#{restaurant.thumbnail}" %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </section>
