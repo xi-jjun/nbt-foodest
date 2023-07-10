@@ -1,8 +1,8 @@
 <%= render 'layouts/nav-bar' %>
 
 <section class="restaurant-list-page">
-  <% @restaurants.each.with_index(1) do |restaurant, idx| %>
-    <div class="restaurant-item" id="restaurant-reviews-link-<%= idx %>">
+  <% @restaurants.each do |restaurant| %>
+    <div class="restaurant-item" id="<%= restaurant.id %>">
       <div class="restaurant-card">
         <div class="content d-flex">
           <div class="col">
@@ -18,5 +18,10 @@
 </section>
 
 <script>
-  document.getElementById('restaurant-reviews-link-')
+	$(function () {
+		$(".restaurant-item").click(function (event) {
+			const restaurantId = $(this).attr('id');
+			location.href = `/restaurants/${restaurantId}/reviews`
+		});
+	});
 </script>
