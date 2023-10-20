@@ -1,0 +1,102 @@
+<section class="">
+  <swiper-container init="false" class="review-item-swiper">
+    <% @reviews.each do |review| %>
+      <swiper-slide class="review-item d-flex flex-column">
+        <%= image_tag "#{review.food_image}" %>
+        <div class="scroll">
+          <div class="review-item-info">
+            <div class="row">
+              <%= label_tag :ordered_foods, '주문메뉴' %>
+              <div class="review-ordered_foods">
+                <%= review.ordered_foods %>
+              </div>
+            </div>
+            <div class="row my-2">
+              <%= label_tag :score, '별점' %>
+              <div class="review-score">
+                <%= review.score %>
+              </div>
+            </div>
+            <div class="row my-2">
+              <%= label_tag :absorbed_level, '음식 몰입도' %>
+              <div class="review-absorbed_level">
+                <%= review.display_absorbed_level %>
+              </div>
+            </div>
+            <div class="row my-2">
+              <%= label_tag :one_line_review, '한줄평' %>
+              <div class="review-one_line_review">
+                <%= review.one_line_review %>
+              </div>
+            </div>
+            <div class="row mx-2 my-2">
+              <button class="like-btn">like</button>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    <% end %>
+  </swiper-container>
+</section>
+
+
+<!--<section class="d-flex justify-content-center review-list-page1">-->
+<!--  <swiper-container init="false" class="mySwiper2 m-0 p-0">-->
+<%# if @reviews.size == 0 %>
+<!--      <h1>첫번째 리뷰어가 되세요!</h1>-->
+<%# end %>
+<%# @reviews.each do |review| %>
+<!--      <swiper-slide class="review-item d-flex flex-column">-->
+<%#= image_tag "#{review.food_image}" %>
+<!--        <div class="scroll">-->
+
+<!--          <div class="review-item-info row d-flex flex-column justify-content-between">-->
+<!--            <div class="row my-2">-->
+<%#= label_tag :ordered_foods, '주문메뉴' %>
+<!--              <div class="review-ordered_foods">-->
+<%#= review.ordered_foods %>
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="row my-2">-->
+<%#= label_tag :score, '별점' %>
+<!--              <div class="review-score">-->
+<%#= review.score %>
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="row my-2">-->
+<%#= label_tag :absorbed_level, '음식 몰입도' %>
+<!--              <div class="review-absorbed_level">-->
+<%#= review.display_absorbed_level %>
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="row my-2">-->
+<%#= label_tag :one_line_review, '한줄평' %>
+<!--              <div class="review-one_line_review">-->
+<%#= review.one_line_review %>
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button class="like-btn my-2">like</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </swiper-slide>-->
+<%# end %>
+<!--  </swiper-container>-->
+<!--</section>-->
+
+<script>
+	const swiperElement = document.querySelector(".review-item-swiper");
+	Object.assign(swiperElement, {
+		grabCursor: true,
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+				shadow: true,
+				translate: [0, 0, -400],
+			},
+			next: {
+				translate: ["100%", 0, 0],
+			},
+		},
+	});
+	swiperElement.initialize();
+</script>
